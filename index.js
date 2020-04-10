@@ -2,8 +2,8 @@
 
 const server = require('./server.js')
 
-const port = process.env.PORT;
 
-server.listen(port, () => {
-    console.log(`listening to port ${port}`)
+
+server.listen(5000, () => {
+    console.log(`server running on port 5000`)
 })

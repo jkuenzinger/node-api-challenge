@@ -40,13 +40,22 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+I learned how express links the server together. It is a middle ware that lets the different componenets of the server speak to each other.
+
 - [ ] Describe Middleware?
+Middle ware is software that lets you interact with your api or server and use actions to manipulate the data and make changes.
 
 - [ ] Describe a Resource?
+A resource is the actual data that is stored on the server in the usually called db file
+
 
 - [ ] What can the API return to help clients know if a request was successful?
+I tcan return a message saying it was successful it can return the data they were requestin or you can program in a error message that goes off if it is not successful. 
+
 
 - [ ] How can we partition our application into sub-applications?
+
+The best way is to use routers and middleware files to break appart your application to requests to specific endpoints and you can have all your middleware in one file. 
 
 ## Minimum Viable Product
 

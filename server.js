@@ -30,9 +30,9 @@ server.get('/project/', (req,res) => {
 
 // this will get a list of specifcis projects by id using params.id
 
-server.get('/projects/:id', (req,res) => {
-    console.log(req,query);
-    projectDb.get(rew.params.id)
+server.get('/project/:id', (req,res) => {
+    console.log(req.query);
+    projectDb.get(req.params.id)
     .then(db => {
         res.status(200).json(db);
     })
@@ -46,10 +46,10 @@ server.get('/projects/:id', (req,res) => {
 
 
 // below will add a new project
-server.post('/projects/', (req,res) => {
-    const projectDb = req.body;
+server.post('/project/', (req,res) => {
+    const projectInfo = req.body;
     console.log('req', req.body)
-        if(projectDb.name && projectDb.description){
+        if(projectInfo.name && projectInfo.description){
             projectDb.insert(req.body)
             .then(db => {
                 res.status(201).json(db)
@@ -66,7 +66,7 @@ server.post('/projects/', (req,res) => {
 
 // below i will do a delete request for deleting a project by using it's id
 
-server.delete('/projects/:id', (req, res) => {
+server.delete('/project/:id', (req, res) => {
     projectDb.remove(req.params.id)
         .then(count => {
             if (count>0) {
